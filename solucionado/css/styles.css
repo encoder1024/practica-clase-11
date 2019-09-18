@@ -1,0 +1,220 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body {
+    margin: 0;
+    background: #16161b;
+    font-family: rubik, Arial, Helvetica, sans-serif;
+    color: white;
+}
+.row {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+.col-6 {
+    float: left;
+    max-width: 50%;
+    width: 100%;
+}
+.col-6:last-of-type {
+    text-align: right;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: inline-block;
+}
+nav li {
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+img {
+    max-width: 100%;
+}
+figure {
+    margin:0;
+}
+.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+.header {
+    padding: 20px 0;
+    background: #202025;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.main {
+    padding-top: 80px;
+}
+.card-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.card {
+    margin: 20px 10px 10px;
+    width: calc((100% / 4) - 40px);
+}
+.card img {
+    border-radius: 10px;
+}
+.card figure {
+    border: 5px solid rgb(255, 251, 0);
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.card figure figcaption {
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    transition: 0.5s ease;
+}
+.card figure:hover figcaption {
+    opacity: 1;
+    background: rgba(0,0,0,0.8);
+}
+.icon-star {
+    background: url('../img/estrella-roja.png');
+    background-size: contain;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+.card .rating {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.card figure h4 {
+    font-size: 24px;
+}
+.movie-data {
+    margin: 15px 0;
+}
+.movie-data a {
+    font-size: 18px;
+    font-weight: 500;
+}
+.year-date {
+    color: rgb(161, 161, 161);
+    margin-top: 10px;
+}
+footer {
+    margin: 15px 0;
+}
+footer p {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 80%;
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: white;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px;
+    color: #4d4d53;
+    border-radius: 10px;
+}
+
+.modal h2 {
+    margin-top:0;
+}
+.icon-cerrar {
+    border: 0;
+    background: 0;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    outline: 0;
+}
+.icon-cerrar:before,
+.icon-cerrar:after {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: orangered;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transform: rotate(135deg);
+}
+.icon-cerrar:after {
+    transform: rotate(225deg);
+}
+.modal:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    height: 100%;
+    background:rgba(0,0,0,0.8);
+}
+
+.form-group {
+    margin: 10px 0;
+}
+.form-group input:not([type="checkbox"]) {
+    width: 100%;
+    margin: 10px 0;
+    padding: 7px 10px;
+}
+input[type="checkbox"] {
+    margin: 10px 10px 10px 0;
+}
+.form-group p {
+    margin: 0;
+}
+.form-group input[type="submit"] {
+    background: darkorange;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+}
+#pelicula {
+    padding: 5px 10px;
+    margin: 15px 0;
+    background: orangered;
+    color: white;
+}
+#messages {
+    color: red;
+}
