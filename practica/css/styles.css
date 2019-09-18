@@ -1,0 +1,215 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+/* crear la clase clearfix para que no se colapsen los elementos que tienen hijos flotados */
+
+body {
+    margin: 0;
+    background: #16161b;
+    font-family: rubik, Arial, Helvetica, sans-serif;
+    color: white;
+}
+/* establecer que la row tenga un ancho máximo de 1080px y un ancho del 100%, además debe estar centrada. */
+.row {
+
+}
+/* las columnas deben flotar a la izquierda, deben tener un ancho máximo de 50% y un ancho del 100%; */
+.col-6 {
+
+}
+.col-6:last-of-type {
+    text-align: right;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* los items de la lista deben tener una propiedad display que les permita colocarse uno al lado del otro, pero al mismo tiempo
+entender ordenes del tipo margin, padding, width o height */
+li {
+
+}
+nav li {
+    margin-right: 20px;
+}
+/* quitar el subrayado de los links, y hacer que el color sea blanco*/
+a {
+ 
+}
+img {
+    max-width: 100%;
+}
+figure {
+    margin:0;
+}
+.hidden {
+    opacity: 0;
+    transform: scale(0);
+}
+/* el icono de estrella debe tener como fondo la imagen estrella-roja.png */
+.icon-star {
+
+    background-size: contain;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+.icon-cerrar {
+    border: 0;
+    background: 0;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    outline: 0;
+}
+.icon-cerrar:before,
+.icon-cerrar:after {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: orangered;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transform: rotate(135deg);
+}
+.icon-cerrar:after {
+    transform: rotate(225deg);
+}
+/* el header debe tener una posición fija, de modo que si hago scroll se mueva con el viewport. */
+.header {
+    padding: 20px 0;
+    background: #202025;
+
+}
+.main {
+    padding-top: 80px;
+}
+.card-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.card {
+    margin: 20px 10px 10px;
+    width: calc((100% / 4) - 40px);
+}
+.card img {
+    border-radius: 10px;
+}
+.card figure {
+    border: 5px solid rgb(255, 251, 0);
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    /* debe tener una posición relativa a sí mismo */
+}
+.card figure figcaption {
+    border-radius: 10px;
+
+    /* debe estar posicionado de manera absoluta respecto del elemento figure.
+    Debe ir desde el extremo superior izquierdo hasta el extremo inferior derecho.
+    */
+  
+    padding: 30px;
+    /* cambiar la opacidad a 0 */
+    transition: 0.5s ease;
+}
+/* después de haber realizado la dos últimas reglas, descomentar la que sigue */
+/*
+.card figure:hover figcaption {
+    opacity: 1;
+    background: rgba(0,0,0,0.8);
+}*/
+.card .rating {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.card figure h4 {
+    font-size: 24px;
+}
+.movie-data {
+    margin: 15px 0;
+}
+.movie-data a {
+    font-size: 18px;
+    font-weight: 500;
+}
+.year-date {
+    color: rgb(161, 161, 161);
+    margin-top: 10px;
+}
+footer {
+    margin: 15px 0;
+}
+footer p {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 80%;
+}
+.modal:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    height: 100%;
+    background:rgba(0,0,0,0.8);
+}
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: white;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 30px;
+    color: #4d4d53;
+    border-radius: 10px;
+}
+.modal h2 {
+    margin-top:0;
+}
+.form-group {
+    margin: 10px 0;
+}
+.form-group input:not([type="checkbox"]) {
+    width: 100%;
+    margin: 10px 0;
+    padding: 7px 10px;
+}
+input[type="checkbox"] {
+    margin: 10px 10px 10px 0;
+}
+.form-group p {
+    margin: 0;
+}
+.form-group input[type="submit"] {
+    background: darkorange;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+}
+#pelicula {
+    padding: 5px 10px;
+    margin: 15px 0;
+    background: orangered;
+    color: white;
+}
+#messages {
+    color: red;
+}
