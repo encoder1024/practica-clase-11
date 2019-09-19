@@ -12,12 +12,14 @@
         <div class="row clearfix">
             <div class="col-6">
                 <!-- colocar el logo. con link a inicio. -->
+                <a href="#"><img src="img/logo.png"></a>
             </div>
             <div class="col-6">
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
                         <!-- colocar link a la sección movies -->
+                        <li><a href="#movies">Movies</a></li>
                     </ul>
                 </nav>
             </div>
@@ -26,7 +28,7 @@
     <main class="main">
         <div class="row clearfix">
             <div class="col-12">
-                <h1>Browse your favorites movies</h1>
+                <h1 id="movies">Browse your favorites movies</h1>
             </div>
         </div>
         <div class="row clearfix">
@@ -43,10 +45,10 @@
                         <li class="card">
                             <figure>
                                 <!-- verificar todas las imágenes y colocar el path y alt correspondiente -->
-                                <img class="cover-image" src="path a la imagen" alt="">
+                                <img class="cover-image" src="img/good-manners-cover.jpg" alt="good-manners">
                                 <!-- agregar un atributo a la etiqueta figcaption que se llame data-image y cuyo valor sea = el título de la película. -->
                                 <!-- repetir en todos los figcaptions -->
-                                <figcaption><!-- <figcaption data-image="" -->
+                                <figcaption data-image="good-manners"><!-- <figcaption data-image="" -->
                                     <span class="icon-star"></span>
                                     <span class="rating">8/10</span>
                                     <h4>Documentary</h4>
@@ -55,17 +57,17 @@
                             </figure>
                             <div class="movie-data">
                                 <!-- colocar el nombre e inventar una año de la pelicula -->
-                                <a href="#">titulo de la pelicula</a>
-                                <div class="year-date">año de la pelicula</div>
+                                <a href="#comprarTickets">good-manners</a>
+                                <div class="year-date">2019</div>
                             </div>
                         </li>
                         <li class="card">
                             <figure>
                                 <!-- verificar todas las imágenes y colocar el path y alt correspondiente -->
-                                <img class="cover-image" src="path a la imagen" alt="">
+                                <img class="cover-image" src="img/harmony-cover.jpg" alt="harmony-cover">
                                 <!-- agregar un atributo a la etiqueta figcaption que se llame data-image y cuyo valor sea = el título de la película. -->
                                 <!-- repetir en todos los figcaptions -->
-                                <figcaption>
+                                <figcaption data-image="harmony-cover">
                                     <!-- <figcaption data-image="" -->
                                     <span class="icon-star"></span>
                                     <span class="rating">8/10</span>
@@ -75,8 +77,8 @@
                             </figure>
                             <div class="movie-data">
                                 <!-- colocar el nombre e inventar una año de la pelicula -->
-                                <a href="#">titulo de la pelicula</a>
-                                <div class="year-date">año de la pelicula</div>
+                                <a href="#comprarTickets">harmony-cover</a>
+                                <div class="year-date">2019</div>
                             </div>
                         </li>
                         <li class="card">
@@ -214,7 +216,7 @@
     <div class="modal hidden">
        <div class="modal-container">
             <div class="modal-header">
-                <h2>Comprar tickets</h2>
+                <h2 id="comprarTickets">Comprar tickets</h2>
                 <p>Selecciona la cantidad de tickets que quieres comprar</p>
                 <button class="icon-cerrar"></button>
             </div>
@@ -242,5 +244,7 @@
        </div>
     </div>
     <!-- linkeamos nuestro html al javascript -->
+    <script src="js/initial.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

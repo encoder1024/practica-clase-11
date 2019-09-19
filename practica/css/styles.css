@@ -5,6 +5,12 @@
 }
 /* crear la clase clearfix para que no se colapsen los elementos que tienen hijos flotados */
 
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
 body {
     margin: 0;
     background: #16161b;
@@ -13,11 +19,15 @@ body {
 }
 /* establecer que la row tenga un ancho máximo de 1080px y un ancho del 100%, además debe estar centrada. */
 .row {
-
+    width: 100%;
+    max-width: 1080px;
+    margin: auto auto;
 }
 /* las columnas deben flotar a la izquierda, deben tener un ancho máximo de 50% y un ancho del 100%; */
 .col-6 {
-
+    float: left;
+    width: 100%;
+    max-width: 50%;
 }
 .col-6:last-of-type {
     text-align: right;
@@ -30,14 +40,15 @@ ul {
 /* los items de la lista deben tener una propiedad display que les permita colocarse uno al lado del otro, pero al mismo tiempo
 entender ordenes del tipo margin, padding, width o height */
 li {
-
+    display: inline-block;
 }
 nav li {
     margin-right: 20px;
 }
 /* quitar el subrayado de los links, y hacer que el color sea blanco*/
 a {
- 
+    text-decoration: none;
+    color: white;
 }
 img {
     max-width: 100%;
@@ -51,7 +62,7 @@ figure {
 }
 /* el icono de estrella debe tener como fondo la imagen estrella-roja.png */
 .icon-star {
-
+    background-image: url("../img/estrella-roja.png");
     background-size: contain;
     display: block;
     width: 60px;
